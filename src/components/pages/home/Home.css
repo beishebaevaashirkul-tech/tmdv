@@ -1,0 +1,155 @@
+#home {
+  color: #fff;
+  /* background: #064b68; */
+}
+
+.homeHero {
+  min-height: 660px;
+  display: flex;
+  align-items: center;
+  background:
+    linear-gradient(90deg, rgb(2 20 42 / 76%), rgb(2 20 42 / 12%)),
+    linear-gradient(0deg, #06314b 0%, transparent 27%);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.homeHeroContent,
+.homeTrendingContent {
+  width: min(1200px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+.homeHeroContent {
+  padding-top: 30px;
+}
+
+.homeHero h1 {
+  margin-bottom: 4px;
+  font-size: clamp(38px, 5vw, 68px);
+  font-weight: 800;
+}
+
+.homeHero h2 {
+  margin-bottom: 42px;
+  font-size: clamp(20px, 2.8vw, 38px);
+  font-weight: 700;
+}
+
+.homeSearch {
+  display: flex;
+  overflow: hidden;
+  min-height: 78px;
+  background: #fff;
+  border-radius: 42px;
+}
+
+.homeSearch input {
+  flex: 1;
+  min-width: 0;
+  padding: 0 30px;
+  border: 0;
+  outline: 0;
+  color: #17242f;
+  font: inherit;
+  font-size: 18px;
+}
+
+.homeSearch input::placeholder {
+  color: #9ba6b1;
+  font-style: italic;
+}
+
+.homeSearch button {
+  min-width: 150px;
+  padding: 0 28px;
+  border: 0;
+  border-radius: 42px;
+  color: #fff;
+  background: #08c5dc;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.homeTrending {
+  padding: 70px 0 80px;
+  background: #064b68;
+}
+
+.homeTrending h2 {
+  margin-bottom: 42px;
+  padding-left: 18px;
+  border-left: 6px solid #08c5dc;
+  font-size: 28px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.homeMovieList {
+  display: flex;
+  gap: 30px;
+  overflow-x: auto;
+  padding: 0 10px 16px;
+}
+
+.homeMovieCard {
+  flex: 0 0 225px;
+}
+
+.homeMovieCard a,
+.homeMovieCard img {
+  display: block;
+  width: 100%;
+}
+
+.homeMovieCard img {
+  height: 337px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.homeMovieCard h3 {
+  margin-top: 18px;
+  font-size: 20px;
+}
+
+.homeMovieCard p {
+  margin-top: 4px;
+  color: #a8c0cc;
+  font-size: 17px;
+}
+
+@media (max-width: 600px) {
+  .homeHero {
+    min-height: 520px;
+  }
+
+  .homeHeroContent,
+  .homeTrendingContent {
+    width: calc(100% - 32px);
+  }
+
+  .homeSearch {
+    min-height: 60px;
+  }
+
+  .homeSearch input {
+    padding: 0 16px;
+    font-size: 14px;
+  }
+
+  .homeSearch button {
+    min-width: 90px;
+    padding: 0 16px;
+  }
+
+  .homeMovieCard {
+    flex-basis: 175px;
+  }
+
+  .homeMovieCard img {
+    height: 262px;
+  }
+}

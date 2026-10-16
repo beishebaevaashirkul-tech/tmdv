@@ -1,0 +1,19 @@
+.TopRatedCard {
+  display: flex;
+  gap: 30px;
+  overflow-y: scroll;
+  margin: 100px 0px;
+  font-size: 11px;
+  width: 188px;
+  height: 350px;
+  background-color: #05022f;
+  color: aliceblue;
+  box-shadow: 3px 18px 18px 1px;
+  border-radius: 18px;
+  h1 {
+    margin-left: 5px;
+  }
+  img {
+    border-radius: 18px;
+  }
+}

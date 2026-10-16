@@ -1,0 +1,91 @@
+#search {
+  min-height: 100vh;
+  padding: 30px 20px;
+  font-size: 14px;
+  /* background: linear-gradient(
+    135deg,
+    #071a2b 0%,
+    #092c40 50%,
+    #071522 100%
+  ); */ 
+  color: #ffffff;
+}
+
+#search .container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+#search .searchCard {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 20px;
+  align-items: start;
+}
+
+/* Карточка фильма */
+#search .searchCard > * {
+  min-width: 0;
+  overflow: hidden;
+  border-radius: 9px;
+  background: rgba(18, 55, 72, 0.85);
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Эффект при наведении */
+#search .searchCard > *:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 220, 210, 0.18);
+}
+
+/* Постер */
+#search .searchCard img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+}
+
+/* Текст внутри карточки */
+#search .searchCard h3,
+#search .searchCard h4,
+#search .searchCard p {
+  margin: 10px 12px;
+  color: #ffffff;
+}
+
+/* Название фильма */
+#search .searchCard h3,
+#search .searchCard h4 {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+/* Дополнительная информация */
+#search .searchCard p {
+  font-size: 14px;
+  color: #a8cbd5;
+}
+
+/* Планшет */
+@media (max-width: 1100px) {
+  #search .searchCard {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+  }
+}
+
+/* Телефон */
+@media (max-width: 700px) {
+  #search {
+    padding: 20px 12px;
+  }
+
+  #search .searchCard {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+}
